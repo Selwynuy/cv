@@ -3,151 +3,277 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Beautiful CV Template</title>
+    <title>Selwyn Uy — Next.js Developer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
-  <body>
+  <body class="bg-grain">
    <nav class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
       <div class="container">
-        <a class="navbar-brand logo" href="#">My CV</a>
+        <a class="navbar-brand logo" href="#">Selwyn Uy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-              <li class="nav-item item">
-                <li class="nav-item item">
-                  <a class="nav-link" href="#work-experience">Work Experience</a>
-                </li>
-                <li class="nav-item item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item item">
-                  <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item item">
-                    <a class="nav-link" href="#hobbies">Hobbies</a>
-                </li>
-              </li>
+              <li class="nav-item item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
           </div>
-          <a href="https://tutorialzine.com/2018/04/freebie-beautiful-cv-template-with-bootstrap" class="btn btn-danger download-template" role="button" aria-disabled="true">Download</a>
+          <a href="assets/cv/selwyn-uy-cv.pdf" download class="btn btn-danger download-template" role="button" aria-disabled="true">Download CV</a>
       </div>
     </nav>
     <main class="page cv-page">
-      <section class="cv-block block-intro border-bottom">
+      <section class="cv-block block-intro border-bottom reveal reveal-scale section-mesh">
         <div class="container">
           <div class="avatar">
-            <img class="img-fluid rounded-circle" src="assets/img/avatar.png">
+            <img class="avatar-img" src="assets/img/avatar.png" alt="Avatar">
           </div>
-          <p>Hello! I am <strong>John Smith</strong>. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces.</p>
-          <a href="#" class="btn btn-outline-primary">Hire Me</a>
+          <p><strong>Selwyn Uy</strong> — Next.js developer crafting fast, accessible apps for startups and teams.</p>
+          <div class="tags">
+            <span class="badge">Next.js</span>
+            <span class="badge">React</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Tailwind</span>
+            <span class="badge">Vercel</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary-solid">Contact Me</a>
+            <a href="assets/files/Curriculum Vitae.pdf" class="btn btn-cv" download>Download CV</a>
+          </div>
+          <div class="social-icons hero-social">
+            <a href="https://www.facebook.com/selwyn.uy.7" aria-label="Facebook"><i class="ion-social-facebook" title="Facebook"></i></a>
+            <a href="https://www.instagram.com/selwyn_once/" aria-label="Instagram"><i class="ion-social-instagram-outline" title="Instagram"></i></a>
+            <a href="https://www.facebook.com/selwyn.uy.7" aria-label="Twitter"><i class="ion-social-twitter" title="Twitter"></i></a>
+          </div>
         </div>
       </section>
-      <section class="cv-block info">
+      <section class="cv-block info section-mesh">
+        <div class="container-fluid projects-container">
+          <div class="group reveal" id="projects">
+            <h2 class="text-center">Projects</h2>
+            <div class="row projects-grid">
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/coastguard/800/600" alt="CoastGuard screenshot">
+                  <h3>CoastGuard</h3>
+                  <div class="badges"><span class="badge">Next.js</span><span class="badge">Leaflet</span><span class="badge">Supabase</span></div>
+                  <p class="text-muted">Dashboard with App Router, RSC, ISR; real‑time map and alerts.</p>
+                  <div class="actions"><a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a> <a href="#" class="btn btn-outline-primary btn-sm">View Code</a></div>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/quickbill/800/600" alt="QuickBill screenshot">
+                  <h3>QuickBill</h3>
+                  <div class="badges"><span class="badge">Next.js</span><span class="badge">Stripe</span><span class="badge">Prisma</span></div>
+                  <p class="text-muted">SaaS invoicing with Server Actions, PDF export, Stripe webhooks.</p>
+                  <div class="actions"><a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a> <a href="#" class="btn btn-outline-primary btn-sm">View Code</a></div>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/lensfolio/800/600" alt="Lensfolio screenshot">
+                  <h3>Lensfolio</h3>
+                  <div class="badges"><span class="badge">Next.js</span><span class="badge">next/image</span><span class="badge">Cloudinary</span></div>
+                  <p class="text-muted">Portfolio theme using next/image, RSC lightbox, and CDN.</p>
+                  <div class="actions"><a href="#" class="btn btn-outline-primary btn-sm">Live Demo</a> <a href="#" class="btn btn-outline-primary btn-sm">View Code</a></div>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/market/800/600" alt="MarketBoard screenshot">
+                  <h3>MarketBoard</h3>
+                  <p class="text-muted">E‑commerce analytics on Next.js with Server Actions, Postgres, and edge caching.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/chat/800/600" alt="ChatOps screenshot">
+                  <h3>ChatOps</h3>
+                  <p class="text-muted">Realtime chat with Next.js, Supabase Realtime, and optimistic UI via RSC patterns.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/notes/800/600" alt="NotePilot screenshot">
+                  <h3>NotePilot</h3>
+                  <p class="text-muted">Knowledge app using Next.js, Prisma, and markdown rendering with file uploads.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/devtools/800/600" alt="DevTools screenshot">
+                  <h3>DevTools</h3>
+                  <p class="text-muted">Internal developer portal on Next.js with RBAC, audit logs, and GitHub SSO.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                </div>
+              </div>
+              <div class="col-md-4 reveal reveal-up project-card-wrapper">
+                <div class="info-card project-card">
+                  <img class="project-img" src="https://picsum.photos/seed/landing/800/600" alt="LaunchKit screenshot">
+                  <h3>LaunchKit</h3>
+                  <p class="text-muted">Marketing stack template for Next.js: MDX blog, analytics, A/B, and forms.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="pagination-controls"></div>
+          </div>
+        </div>
+      </section>
+      <section class="cv-block info section-mesh" id="about">
         <div class="container">
-          <div class="work-experience group" id="work-experience">
+          <div class="group reveal">
+            <h2 class="text-center">About</h2>
+            <p class="text-center section-lead">I help startups ship reliable, fast web apps with Next.js. My focus is developer experience, performance, and accessible UI. I love turning messy ideas into shippable, delightful products.</p>
+            <div class="row align-items-center about-row">
+              <div class="col-md-6 reveal reveal-up">
+                <div class="info-card">
+                  <h2>What I Do</h2>
+                  <ul>
+                    <li>Design performant Next.js architectures (App Router, RSC, ISR)</li>
+                    <li>Build component systems with Tailwind/shadcn</li>
+                    <li>Integrate auth, payments, and analytics</li>
+                    <li>Optimize Core Web Vitals and accessibility</li>
+                    <li>Lead migrations to TypeScript and testing culture</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 reveal reveal-up">
+                <div class="about-photo">
+                  <img src="assets/img/about-me.jpg" alt="About Selwyn Uy" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cv-block info section-mesh">
+        <div class="container">
+          <div class="work-experience group reveal" id="work-experience">
             <h2 class="text-center">Work Experience</h2>
             <div class="item">
               <div class="row">
-                <div class="col-md-6">
-                  <h3>Web Developer</h3>
-                  <h4 class="organization">Amazing Co.</h4>
+                <div class="col-md-6 reveal reveal-right">
+                  <h3>Next.js Developer</h3>
+                  <h4 class="organization">Harbor Labs</h4>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 reveal">
                   <time class="period">10/2013 - 04/2015</time>
                 </div>
               </div>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+              <p class="text-muted">Built dashboards on Next.js (App Router) with RSC and ISR; trimmed TTFB by 40% on Vercel Edge. Led TS migration and added CI lint/test gates.</p>
             </div>
             <div class="item">
               <div class="row">
-                <div class="col-md-6">
-                  <h3>Front End Developer</h3>
-                  <h4 class="organization">Innovative Org.</h4>
+                <div class="col-md-6 reveal reveal-right">
+                  <h3>Senior Next.js Engineer</h3>
+                  <h4 class="organization">Pixelworks</h4>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 reveal">
                   <time class="period">05/2015 - 12/2017</time>
                 </div>
               </div>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+              <p class="text-muted">Shipped design‑system components and Next.js server components; achieved 95+ Lighthouse, reduced bundle 28% via route‑level code‑splitting.</p>
             </div>
             <div class="item">
               <div class="row">
-                <div class="col-md-6">
-                  <h3>Web Developer</h3>
-                  <h4 class="organization">Special Inc.</h4>
+                <div class="col-md-6 reveal reveal-right">
+                  <h3>Software Engineer (Next.js)</h3>
+                  <h4 class="organization">Freelance</h4>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 reveal">
                   <time class="period">12/2017 - Present</time>
                 </div>
               </div>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+              <p class="text-muted">Consulting for startups: landing pages, SaaS dashboards, auth & payments. Stack: Next.js 14, Tailwind, Node, Prisma, Postgres/Supabase.</p>
             </div>
           </div>
-          <div class="education group" id="education">
+          <div class="education group reveal" id="education">
             <h2 class="text-center">Education</h2>
             <div class="item">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 reveal reveal-right">
                   <h3>High School</h3>
-                  <h4 class="organization">Albert Einstein School</h4>
+                  <h4 class="organization">Poblacion Polomolok National High School</h4>
                 </div>
-                <div class="col-md-6">
-                  <time class="period">09/2005 - 05/2010</time>
+                <div class="col-md-6 reveal">
+                  <time class="period">09/2012 - 05/2018</time>
                 </div>
               </div>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+              <p class="text-muted">STEM track, Consistent Honor Student, Best in Mathematics.</p>
             </div>
             <div class="item">
               <div class="row">
-                <div class="col-md-6">
-                  <h3>Applied Physics</h3>
-                  <h4 class="organization">Stephen Hawking College</h4>
+                <div class="col-md-6 reveal reveal-right">
+                  <h3>BS Information Technology</h3>
+                  <h4 class="organization">Mindanao State University - General Santos City</h4>
                 </div>
-                <div class="col-md-6">
-                  <time class="period">09/2010 - 06/2015</time>
+                <div class="col-md-6 reveal">
+                  <time class="period">09/2022 - 06/2026</time>
                 </div>
               </div>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+              <p class="text-muted">Focused on web technologies, databases, and HCI. Consistent Dean's List.
+              </p>
             </div>
           </div>
-          <div class="group" id="skills">
+          <div class="group reveal" id="skills">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-8 reveal reveal-up">
                 <div class="skills info-card">
-                  <h2>Skills</h2>
-                  <h3>HTML</h3>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                    aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                  <h2>Skills & Tools</h2>
+                  <div class="skills-grid">
+                    <div class="skills-group">
+                      <h3>Frontend</h3>
+                      <div class="badges">
+                        <span class="badge" title="React 18 / Hooks / RSC">React</span>
+                        <span class="badge" title="SSR, ISR, App Router">Next.js</span>
+                        <span class="badge" title="Utility-first CSS">Tailwind</span>
+                        <span class="badge" title="Type safety everywhere">TypeScript</span>
+                      </div>
                     </div>
+                    <div class="skills-group">
+                      <h3>Backend</h3>
+                      <div class="badges">
+                        <span class="badge" title="API, workers">Node.js</span>
+                        <span class="badge" title="ORM">Prisma</span>
+                        <span class="badge" title="Postgres managed">Supabase</span>
+                        <span class="badge" title="Authentication">NextAuth</span>
                   </div>
-                  <h3>PHP</h3>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                    aria-valuemin="0" aria-valuemax="100" style="width:90%">
                     </div>
+                    <div class="skills-group">
+                      <h3>DevOps</h3>
+                      <div class="badges">
+                        <span class="badge" title="Edge + Functions">Vercel</span>
+                        <span class="badge" title="CI/CD">GitHub Actions</span>
+                        <span class="badge" title="Monitoring">Sentry</span>
+                        <span class="badge" title="Analytics">PostHog</span>
                   </div>
-                  <h3>JavaScript</h3>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                    aria-valuemin="0" aria-valuemax="100" style="width:80%">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4 reveal reveal-up">
                 <div class="contact-info info-card">
                   <h2>Contact Info</h2>
+                  <div class="row">
+                    <div class="col-12" style="margin-bottom:10px;">
+                      <a href="assets/cv/selwyn-uy-cv.pdf" download class="btn btn-outline-primary btn-sm">Download CV (PDF)</a>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-1">
                       <i class="ion-android-calendar icon"></i>
                     </div>
                     <div class="col-9">
-                      <span>10/10/1990</span>
+                      <span>01/11/2003</span>
                     </div>
                   </div>
                   <div class="row">
@@ -155,7 +281,7 @@
                         <i class="ion-person icon"></i>
                     </div>
                     <div class="col-9">
-                      <span>John Smith</span>
+                      <span>Selwyn Uy</span>
                     </div>
                   </div>
                   <div class="row">
@@ -163,7 +289,7 @@
                       <i class="ion-ios-telephone icon"></i>
                     </div>
                     <div class="col-9">
-                      <span>+235 3217 424</span>
+                      <span>+63 931 974 6163</span>
                     </div>
                   </div>
                   <div class="row">
@@ -171,25 +297,54 @@
                       <i class="ion-at icon"></i>
                     </div>
                     <div class="col-9">
-                      <span>lorem@email.com</span>
+                      <span>selwyn.cybersec@gmail.com</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="hobbies group" id="hobbies">
-            <h2 class="text-center">Hobbies</h2>
-            <p class="text-center text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras risus ligula, iaculis ut metus sit amet, luctus pharetra mauris. Aliquam purus felis, pretium vel pretium vitae, dapibus sodales ante. Suspendisse potenti. Duis nunc eros.</p>
+          <div class="group reveal" id="contact">
+            <h2 class="text-center">Contact</h2>
+            <div class="info-card">
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Tell me about your project" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-primary">Send</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
-      <footer class="page-footer">
-        <div class="container">
+      <footer class="page-footer section-mesh">
+        <div class="container footer-inner">
+          <div class="footer-brand">
+            <a class="logo nav-link" href="#">Selwyn Uy</a>
+            <div class="muted small">Next.js Developer • Polomolok, PH</div>
+          </div>
+          <nav class="footer-nav">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="assets/files/Curriculum Vitae.pdf" download>Download CV</a>
+          </nav>
           <div class="social-icons">
-            <a href="#"><i class="ion-social-facebook" title="Facebook"></i></a>
-            <a href="#"><i class="ion-social-instagram-outline" title="Instagram"></i></a>
-            <a href="#"><i class="ion-social-twitter" title="Twitter"></i></a>
+            <a href="https://www.facebook.com/selwyn.uy.7" aria-label="Facebook"><i class="ion-social-facebook" title="Facebook"></i></a>
+            <a href="https://www.instagram.com/selwyn_once/" aria-label="Instagram"><i class="ion-social-instagram-outline" title="Instagram"></i></a>
+            <a href="https://www.facebook.com/selwyn.uy.7" aria-label="Twitter"><i class="ion-social-twitter" title="Twitter"></i></a>
           </div>
         </div>
       </footer>
