@@ -342,6 +342,14 @@
             box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
         }
 
+        .row-checkbox::before, .row-checkbox::after {
+            display: none !important;
+        }
+        
+        .form-check-input::before, .form-check-input::after {
+            display: none !important;
+        }
+
         @media (max-width: 768px) {
             .container-custom {
                 padding: 1.5rem;
@@ -705,4 +713,5 @@
         });
     </script>
 </body>
+
 </html>
